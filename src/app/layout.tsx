@@ -2,8 +2,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import { Toaster } from 'sonner'
-import { WelcomeToast } from './welcome-toast'
-import { Suspense } from 'react'
+import { WelcomeToast } from '../components/common/welcome-toast'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -26,10 +25,8 @@ export default function RootLayout({
     <html lang='en'>
       <body className={`${inter.className} antialiased`}>
         {children}
-        <Suspense fallback={null}>
-          <Toaster closeButton />
-          <WelcomeToast />
-        </Suspense>
+        <Toaster closeButton />
+        <WelcomeToast />
       </body>
     </html>
   )
