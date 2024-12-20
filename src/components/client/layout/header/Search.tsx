@@ -23,14 +23,14 @@ const Search = () => {
     }
   }, [handleSearch, search])
   return (
-    <div className='flex items-center bg-gray-50 rounded-full overflow-hidden pl-3 pr-1 py-0.5'>
+    <div className='flex items-center overflow-hidden rounded-full bg-gray-50 py-0.5 pl-3 pr-1'>
       <Input
         value={search}
         placeholder='Tìm kiếm'
-        className='rounded-full border-none shadow-none px-1'
+        className='rounded-full border-none px-1 shadow-none'
         onChange={e => setSearch(e.target.value)}
       />
-      <Button onClick={handleSearch} variant={'ghost'} size={'sm'} className='p-2 rounded-full hover:bg-primary/10'>
+      <Button onClick={handleSearch} variant={'ghost'} size={'sm'} className='rounded-full p-2 hover:bg-primary/10'>
         <SearchIcon className='size-5 text-primary' />
       </Button>
     </div>

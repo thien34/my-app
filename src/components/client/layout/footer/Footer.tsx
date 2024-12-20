@@ -125,7 +125,7 @@ export default function Footer({ className }: Props) {
                 <ul role='list' className='mt-4 space-y-4'>
                   {item.links.map((link, index) => (
                     <li key={index} className='group'>
-                      <Link href={link.link} className='text-sm/6 text-gray-600 hover:text-gray-900 '>
+                      <Link href={link.link} className='text-sm/6 text-gray-600 hover:text-gray-900'>
                         {link.title}
                       </Link>
                     </li>

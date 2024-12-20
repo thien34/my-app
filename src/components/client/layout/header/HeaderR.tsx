@@ -6,9 +6,9 @@ import Account from './Account'
 
 const HeaderR = () => {
   return (
-    <div className='flex justify-end gap-2 items-center'>
+    <div className='flex items-center justify-end gap-2'>
       <Link href={'/bai-viet'}>
-        <Button className='py-2 px-3 rounded-full shadow-none' variant={'outline'}>
+        <Button className='rounded-full px-3 py-2 shadow-none' variant={'outline'}>
           <LibraryBig />
           <span className='font-normal'>Bài viết</span>
         </Button>
@@ -16,7 +16,7 @@ const HeaderR = () => {
       <Search />
       <Account />
       <Link href={'/dang-nhap'}>
-        <Button className='border border-primary rounded-full py-1.5 font-medium'>Đăng nhập</Button>
+        <Button className='rounded-full border border-primary py-1.5 font-medium'>Đăng nhập</Button>
       </Link>
     </div>
   )

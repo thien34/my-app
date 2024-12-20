@@ -12,7 +12,7 @@ const Nav = ({ navs }: Props) => {
     <nav>
       <ul className='flex items-center justify-center gap-6'>
         {navs.map(nav => (
-          <li key={nav.href} className='text-sm hover:underline hover:text-primary transition-all underline-offset-2'>
+          <li key={nav.href} className='text-sm underline-offset-2 transition-all hover:text-primary hover:underline'>
             <Link href={nav.href}>{nav.label}</Link>
           </li>
         ))}

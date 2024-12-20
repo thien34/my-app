@@ -29,7 +29,7 @@ const navs = [
 const Header = () => {
   return (
     <header className='border-b'>
-      <div className={cn('max-w-screen-xl mx-auto py-3 grid grid-cols-2 items-center justify-between px-4')}>
+      <div className={cn('mx-auto grid max-w-screen-xl grid-cols-2 items-center justify-between px-4 py-3')}>
         <div className='flex items-center gap-14'>
           <Logo logo={logo} />
           <Nav navs={navs} />

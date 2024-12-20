@@ -31,20 +31,20 @@ const Banner = ({ banners }: Props) => {
     })
   }, [api])
   return (
-    <div className='mt-4 grid grid-cols-4 max-w-screen-xl mx-auto gap-x-6 px-4'>
+    <div className='mx-auto mt-4 grid max-w-screen-xl grid-cols-4 gap-x-6 px-4'>
       <Carousel
         setApi={setApi}
         opts={{
           align: 'start',
           loop: true
         }}
-        className='col-span-3 rounded-xl overflow-hidden'
+        className='col-span-3 overflow-hidden rounded-xl'
       >
         <CarouselContent>
           {banners.main.map(banner => (
             <CarouselItem
               key={banner.id}
-              className='aspect-[16/7] bg-cover bg-center relative'
+              className='relative aspect-[16/7] bg-cover bg-center'
               style={{
                 backgroundImage: `url(${banner.image})`
               }}
@@ -53,19 +53,19 @@ const Banner = ({ banners }: Props) => {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className='left-0 shadow-none rounded-s-none border-none bg-white/60' />
-        <CarouselNext className='right-0 shadow-none rounded-e-none border-none bg-white/60' />
-        <div className='flex items-center justify-center gap-2 absolute z-10 bottom-4 left-1/2 -translate-x-1/2'>
+        <CarouselPrevious className='left-0 rounded-s-none border-none bg-white/60 shadow-none' />
+        <CarouselNext className='right-0 rounded-e-none border-none bg-white/60 shadow-none' />
+        <div className='absolute bottom-4 left-1/2 z-10 flex -translate-x-1/2 items-center justify-center gap-2'>
           {Array.from({ length: count }).map((_, i) => (
             <span
               key={i}
-              className={cn('size-2 shadow-lg rounded-2xl', current === i + 1 ? 'bg-primary' : 'bg-white')}
+              className={cn('size-2 rounded-2xl shadow-lg', current === i + 1 ? 'bg-primary' : 'bg-white')}
             ></span>
           ))}
         </div>
       </Carousel>
       <div
-        className='bg-center bg-cover rounded-xl h-full'
+        className='h-full rounded-xl bg-cover bg-center'
         style={{
           backgroundImage: `url(${banners.sub.image})`
         }}

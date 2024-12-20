@@ -9,12 +9,12 @@ type PostsProps = {
 
 const Posts = ({ posts }: PostsProps) => {
   return (
-    <Link href={`/bai-viet/${posts.title}`} className='bg-gray-50 rounded-md'>
-      <div className='h-40 bg-gray-300 rounded-t-lg aspect-video w-full'>
+    <Link href={`/bai-viet/${posts.title}`} className='rounded-md bg-gray-50'>
+      <div className='aspect-video h-40 w-full rounded-t-lg bg-gray-300'>
         <Image
           src={posts.image}
           alt={posts.title}
-          className='rounded-t-lg w-full object-cover aspect-video'
+          className='aspect-video w-full rounded-t-lg object-cover'
           width={300}
           height={200}
         />
@@ -28,8 +28,8 @@ const Posts = ({ posts }: PostsProps) => {
           {/* 2 gio truoc */}
           <p className='text-sm text-gray-500'>{format(new Date(posts.date), 'dd/MM/yyyy')}</p>
         </div>
-        <h4 className='text-base line-clamp-2 font-semibold'>{posts.title}</h4>
-        <p className='text-gray-500 mt-1 text-sm line-clamp-3'>{posts.description}</p>
+        <h4 className='line-clamp-2 text-base font-semibold'>{posts.title}</h4>
+        <p className='mt-1 line-clamp-3 text-sm text-gray-500'>{posts.description}</p>
       </div>
     </Link>
   )

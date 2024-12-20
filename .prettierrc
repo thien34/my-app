@@ -10,5 +10,8 @@
   "arrowParens": "avoid",
   "useTabs": false,
   "jsxBracketSameLine": false,
-  "proseWrap": "always"
+  "proseWrap": "always",
+  "plugins": [
+    "prettier-plugin-tailwindcss"
+  ]
 }

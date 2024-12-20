@@ -22,7 +22,7 @@ const Account = () => {
           <AvatarFallback>CN</AvatarFallback>
         </Avatar>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className='border-none rounded-xl' align='end'>
+      <DropdownMenuContent className='rounded-xl border-none' align='end'>
         {menus.map(menu => (
           <Link className='w-full' href={menu.href} key={menu.href}>
             <DropdownMenuItem>{menu.title}</DropdownMenuItem>

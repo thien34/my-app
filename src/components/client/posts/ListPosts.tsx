@@ -44,7 +44,7 @@ const listPosts: PostType[] = [
 
 const ListPosts = () => {
   return (
-    <div className='max-w-screen-xl mx-auto px-4 py-6 mt-8'>
+    <div className='mx-auto mt-8 max-w-screen-xl px-4 py-6'>
       <div className='flex items-center justify-between'>
         <h3 className='text-xl font-semibold uppercase'>Bài viết hay</h3>
         <Button variant={'link'}>

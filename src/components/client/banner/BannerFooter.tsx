@@ -11,11 +11,11 @@ const footerBanner = [
 
 const BannerFooter = () => {
   return (
-    <div className='grid mt-8 grid-cols-2 gap-x-6 max-w-screen-xl px-4 mx-auto'>
+    <div className='mx-auto mt-8 grid max-w-screen-xl grid-cols-2 gap-x-6 px-4'>
       {footerBanner.map(banner => (
         <div
           key={banner.id}
-          className='bg-center bg-cover aspect-[16/7] rounded-xl'
+          className='aspect-[16/7] rounded-xl bg-cover bg-center'
           style={{
             backgroundImage: `url(${banner.image})`
           }}
