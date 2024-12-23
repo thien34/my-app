@@ -3,6 +3,8 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import { Toaster } from 'sonner'
 import { WelcomeToast } from '../components/common/welcome-toast'
+import { ReactNode } from 'react'
+import { cn } from '@/lib/utils'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -19,11 +21,11 @@ export const revalidate = 86400 // One day (ISR)
 export default function RootLayout({
   children
 }: Readonly<{
-  children: React.ReactNode
+  children: ReactNode
 }>) {
   return (
     <html lang='en'>
-      <body className={`${inter.className} antialiased`}>
+      <body className={cn('bg-gray-900 text-white antialiased', inter.className)}>
         {children}
         <Toaster closeButton />
         <WelcomeToast />

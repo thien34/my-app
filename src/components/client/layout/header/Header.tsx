@@ -1,42 +1,47 @@
-import Logo from './Logo'
 import Nav from './Nav'
-import HeaderR from './HeaderR'
-import { cn } from '@/lib/utils'
 
-const logo = {
-  src: '/logo.png',
-  alt: 'AnhVanHoa'
-}
+// const logo = {
+//   src: '/logo.png',
+//   alt: 'luoicode'
+// }
+
 const navs = [
   {
-    label: 'Mac',
-    href: '/danh-muc/mac'
+    label: 'Home',
+    href: '/'
   },
   {
-    label: 'iPhone',
-    href: '/danh-muc/iphone'
+    label: 'Blog',
+    href: '/blog'
   },
   {
-    label: 'iPad',
-    href: '/danh-muc/ipad'
+    label: 'Projects',
+    href: '/project'
   },
   {
-    label: 'Phụ kiện',
-    href: '/danh-muc/phu-kien'
+    label: 'About',
+    href: '/about'
+  },
+  {
+    label: 'Contact',
+    href: '/contact'
   }
 ]
 
 const Header = () => {
   return (
-    <header className='border-b'>
-      <div className={cn('mx-auto grid max-w-screen-xl grid-cols-2 items-center justify-between px-4 py-3')}>
-        <div className='flex items-center gap-14'>
-          <Logo logo={logo} />
-          <Nav navs={navs} />
-        </div>
-        <HeaderR />
-      </div>
+    <header className='fixed top-3 flex w-full items-center justify-center overflow-x-hidden'>
+      <Nav navs={navs} />
     </header>
+    // <header className=''>
+    //   <div className='max-w-screen-xl mx-auto grid grid-cols-2 items-center justify-between px-4 py-3'>
+    //     <div className='flex items-center gap-14'>
+    //       {/* <Logo logo={logo} /> */}
+    //       <Nav navs={navs} />
+    //     </div>
+    //     {/* <HeaderR /> */}
+    //   </div>
+    // </header>
   )
 }
 

@@ -1,4 +1,3 @@
-import Footer from '@/components/client/layout/footer'
 import Header from '@/components/client/layout/header'
 import { ReactNode } from 'react'
 
@@ -9,9 +8,11 @@ type LayoutProps = {
 const Layout = ({ children }: LayoutProps) => {
   return (
     <div>
-      <Header />
+      <div className='relative z-10'>
+        <Header />
+      </div>
       {children}
-      <Footer />
+      {/* <Footer /> */}
     </div>
   )
 }
