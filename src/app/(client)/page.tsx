@@ -1,9 +1,11 @@
 import Overview from '@/components/client/portfolio/overview'
+import Projects from '@/components/client/portfolio/project'
 
 export default async function Home() {
   return (
-    <main className='md:py-38 container relative z-0 py-32 lg:py-40'>
+    <main>
       <Overview />
+      <Projects />
     </main>
   )
 }

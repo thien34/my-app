@@ -7,20 +7,20 @@ import { ArrowDown } from 'lucide-react'
 
 const Overview = () => {
   return (
-    <>
+    <div className='md:py-38 relative z-0 py-32 lg:py-40'>
       <div
         className='absolute inset-0 left-1/2 top-1/2 z-0 h-screen w-screen -translate-x-1/2 -translate-y-1/2 overflow-x-clip opacity-[0.03] [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]'
         style={{ backgroundImage: `url(${grainImage.src})` }}
       />
+      <div
+        className='pixelated absolute inset-0 bg-center bg-no-repeat'
+        style={{ backgroundImage: `url(${startImage.src})` }}
+      />
       <div className='absolute inset-0 z-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]'>
-        <div
-          className='pixelated absolute inset-0 bg-center bg-no-repeat'
-          style={{ backgroundImage: `url(${startImage.src})` }}
-        />
-        <div className='absolute inset-0 left-1/2 top-1/2 mt-11 size-[610px] -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-emerald-300/5 shadow-[0_0_80px_inset] shadow-emerald-300/5' />
-        <div className='absolute inset-0 left-1/2 top-1/2 mt-11 size-[810px] -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-emerald-300/5 shadow-[0_0_80px_inset] shadow-emerald-300/5' />
-        <div className='absolute inset-0 left-1/2 top-1/2 mt-11 size-[1010px] -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-emerald-300/5 shadow-[0_0_80px_inset] shadow-emerald-300/5' />
-        <div className='absolute inset-0 left-1/2 top-1/2 mt-11 size-[1200px] -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-emerald-300/5 shadow-[0_0_80px_inset] shadow-emerald-300/5' />
+        <div className='absolute inset-0 left-1/2 top-1/2 mt-8 size-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-emerald-300/5 shadow-[0_0_80px_inset] shadow-emerald-300/5' />
+        <div className='absolute inset-0 left-1/2 top-1/2 mt-8 size-[800px] -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-emerald-300/5 shadow-[0_0_80px_inset] shadow-emerald-300/5' />
+        <div className='absolute inset-0 left-1/2 top-1/2 mt-8 size-[1000px] -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-emerald-300/5 shadow-[0_0_80px_inset] shadow-emerald-300/5' />
+        <div className='absolute inset-0 left-1/2 top-1/2 mt-8 size-[1200px] -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-emerald-300/5 shadow-[0_0_80px_inset] shadow-emerald-300/5' />
       </div>
       <div className='relative z-10'>
         <div className='flex flex-col items-center justify-center'>
@@ -47,7 +47,7 @@ const Overview = () => {
           </Button>
         </div>
       </div>
-    </>
+    </div>
   )
 }
 
